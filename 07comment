@@ -1,0 +1,8 @@
+//wntjr dustmqgkrl
+var x = "a";
+console.log(x); // printing x on console
+
+/*
+x = "b";
+console.lox(x);
+*/
