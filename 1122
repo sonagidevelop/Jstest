@@ -1,0 +1,35 @@
+var hometown = [
+  {name:"jin",place:"gwachun"},
+  {name:"joon",place:"ilsan",city:"goyang"},
+
+  {name:"hosuk",place:"gwangju",city:"junlado"},
+  {name:"jimin",place:"pusan",city:"gyeongsangdo"},
+];
+var isHometown = function(h, name) {
+  console.log(`function running. find ${name} in ${h.city}.`) ;
+  
+  if (h.name === name) {
+    console.log(`${name} is from ${h.city} ${h.place}.`);
+    return true;
+  }
+  return false;
+}
+
+var h ;
+while (h = hometown.shift()) {
+  if (!h.name || !h.place || !h.city) continue;
+  
+  var result = isHometown (h, 'hosuk');
+  if (result) break;
+}
+
+var i = 0 ;
+var names=['a','b','c','d'] ;
+var fool=['A','B','C','D'] ;
+
+do {
+  hometown[i] = {name: names[i], city:fool[i]};
+i++ ;
+} while (i < 4) ;
+
+console.log(hometown);
